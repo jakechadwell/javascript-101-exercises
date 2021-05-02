@@ -770,13 +770,21 @@ addToDone("Exercise 45 is correct.")
 // Exercise 46
 // Write a function definition named removeVowels that takes in string and returns the string without any vowels
 function removeVowels(x) {
-    let str = x.toLowerCase();
-    let remove;
-    for(let index = 0; index < str.length; index++) {
-        if (str[index] === "a" || str[index] === "e" || str[index] === "i" || str[index] === "o" || str[index] === "u") {
-            ;
+    let vowels = {
+        'a': true,
+        'e': true,
+        'i': true,
+        'o': true,
+        'u': true
+    };
+    let result = "";
+    for (let i = 0; i < x.length; i++) {
+        let letter = x[i].toLowerCase();
+        if (!vowels[letter]) {
+            result += x[i];
         }
-    }return remove;
+    }
+    return result;
 }
 assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");
@@ -792,8 +800,8 @@ function startsWithVowel(word) {
 
     for(let index = 0; index < vowels.length; index++) {
         let vowel = vowels[index];
-        let x = word.indexOf(vowel);
-        if (x=0) {
+        let split = word.split("");
+        if (split[0]===vowel) {
             return true;
         }
     }
@@ -810,7 +818,16 @@ addToDone("Exercise 47 is correct.")
 
 function endsWithVowel(x) {
     var lengthMinusOne = x.length-1
-    return (x.charAt(lengthMinusOne)==="a"||"e"||"i"||"o"||"u")
+    const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+
+    for(let index = 0; index < vowels.length; index++) {
+        let vowel = vowels[index];
+        let split = x.split("");
+        if (split[lengthMinusOne]===vowel) {
+            return true;
+        }
+    }
+    return false;
 }
 
 assert(endsWithVowel("ubuntu"), true, "Exercise 48");
