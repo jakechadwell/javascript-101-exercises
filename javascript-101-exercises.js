@@ -918,7 +918,9 @@ addToDone("Exercise 54 is correct.")
 
 // Exercise 55
 // Write a function definition named secondToLast that takes in sequence and returns the second to last value of that sequence.
-
+function secondToLast(x){
+    return x[x.length-2]
+}
 assert(secondToLast("ubuntu"), "t", "Exercise 55");
 assert(secondToLast([1, 2, 3, 4]), 3, "Exercise 55");
 assert(secondToLast(["JS", "is", "awesome"]), "is", "Exercise 55");
