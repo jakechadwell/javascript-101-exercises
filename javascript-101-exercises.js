@@ -1224,6 +1224,15 @@ addToDone("Exercise 73 is correct.")
 // Exercise 74
 // Write a function definition named countOdds that takes in sequence of numbers and returns a count of the any odd numbers in the sequence
 
+function countOdds(x){
+    let oddCount = 0;
+    for (let i = 0; i<x.length; i++){
+        if (x[i]%2!==0){
+            oddCount ++;
+        }
+    }return oddCount;
+}
+
 assert(countOdds([1, 2, 3]), 2, "Exercise 74");
 assert(countOdds([2, 5, 6]), 1, "Exercise 74");
 assert(countOdds([3, 3, 3]), 3, "Exercise 74");
