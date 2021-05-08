@@ -1338,6 +1338,15 @@ addToDone("Exercise 79 is correct.")
 // Exercise 80
 // Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
 
+function onlyNegativeOdds(x){
+    let newArray = [];
+    for (let i = 0; i<x.length; i++){
+        if(x[i]<0 && x[i]%2!==0){
+            newArray.push(x[i]);
+        }
+    } return newArray;
+}
+
 assert(onlyNegativeOdds([1, -2, 3]), [], "Exercise 80");
 assert(onlyNegativeOdds([2, -5, -6]), [-5], "Exercise 80");
 assert(onlyNegativeOdds([3, 3, 4, 6]), [], "Exercise 80");
