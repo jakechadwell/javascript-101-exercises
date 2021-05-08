@@ -1048,6 +1048,13 @@ addToDone("Exercise 63 is correct.")
 // Exercise 64
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
 
+function productOfAll(x){
+    let product = 1;
+    for (let i = 0; i<x.length; i++){
+        product*=x[i];
+    }return product
+}
+
 assert(productOfAll([1, 2, 3]), 6, "Exercise 64");
 assert(productOfAll([3, 4, 5]), 60, "Exercise 64");
 assert(productOfAll([2, 2, 3, 0]), 0, "Exercise 64");
