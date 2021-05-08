@@ -843,6 +843,13 @@ function startsAndEndsWithVowel(x){
     var lengthMinusOne = x.length-1
     const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
+<<<<<<< HEAD
+function startsAndEndsWithVowel(x) {
+    var lengthMinusOne = x.length-1
+    return (x.charAt(lengthMinusOne) && (x.charAt(0))==="a"||"e"||"i"||"o"||"u")
+}
+
+=======
     for(let index = 0; index < vowels.length; index++) {
         let vowel = vowels[index];
         let split = x.split("");
@@ -852,6 +859,7 @@ function startsAndEndsWithVowel(x){
     }
     return false;
 }
+>>>>>>> 22309896f91adfcd539ad45f724375d996e581f7
 assert(startsAndEndsWithVowel("ubuntu"), true, "Exercise 49");
 assert(startsAndEndsWithVowel("banana"), false, "Exercise 49");
 assert(startsAndEndsWithVowel("mango"), false, "Exercise 49");
