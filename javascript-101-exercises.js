@@ -1080,6 +1080,10 @@ addToDone("Exercise 65 is correct.")
 // Exercise 66
 // Write a function definition named getSmallestNumber that takes in sequence of numbers and returns the smallest number.
 
+function getSmallestNumber(x){
+    x.sort();
+    return x[0];
+}
 
 assert(getSmallestNumber([1, 2, 3]), 1, "Exercise 66");
 assert(getSmallestNumber([3, 5, 9, 8, 1]), 1, "Exercise 66");
