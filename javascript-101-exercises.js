@@ -1385,7 +1385,16 @@ addToDone("Exercise 82 is correct.")
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
 
-
+function getUniqueValues(x){
+    let newArray = [];
+    for (let i = 0; i<x.length; i++){
+        if(newArray.includes(x[i])){
+            continue;
+        }else {
+            newArray.push(x[i]);
+        }
+    }return newArray;
+}
 
 assert(getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]), ["ant", "mosquito", "ladybug"], "Exercise 83");
 assert(getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]), ["b", "a", "n", "s"], "Exercise 83");
