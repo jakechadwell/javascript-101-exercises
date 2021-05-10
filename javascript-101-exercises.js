@@ -1420,6 +1420,9 @@ addToDone("Exercise 84 is correct.")
 // Exercise 85
 // Write a function named flatten that takes in an array of arrays. Return the flattened array.
 
+function flatten(x){
+    return [].concat.apply([], x);
+}
 
 assert(flatten([[1, 2], [3, 4], [5, 6]]), [1, 2, 3, 4, 5, 6], "Exercise 85");
 assert(flatten([[1, 2, 3], [1, 2, 3], [1, 2, 3]]), [1, 2, 3, 1, 2, 3, 1, 2, 3], "Exercise 85");
