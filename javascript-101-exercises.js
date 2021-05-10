@@ -1480,7 +1480,9 @@ addToDone("Exercise 87 is correct.")
 // Exercise 88
 // Write a function named getYearPublished that takes in an objects and returns the value behind the "year_published" key.
 
-
+function getYearPublished(x){
+    return x.year_published;
+}
 
 assert(getYearPublished(tukeyPaper), 1962, "Exercise 88");
 assert(getYearPublished(thomasPaper), 2008, "Exercise 88");
@@ -1496,6 +1498,8 @@ const book = {
 
 // Exercise 89
 // Write a function named getPrice that takes in a object and returns the price
+
+
 
 assert(getPrice(book), 36.99, "Exercise 89");
 addToDone("Exercise 89 is complete.")
